@@ -1,4 +1,3 @@
-<!--  ./views/index.handlebars -->
 <div class="container py-5">
 
   <div class="row">
@@ -67,6 +66,12 @@
                 <small class="text-muted form-text">These characters will not appear in the passwrod</small>
               </div>
             </div>
+
+            {{#if password}}
+            <div class="alert alert-info" role="alert">
+              <span class="mr-2">Your password is:</span> <code>{{password}}</code>
+            </div>
+            {{/if}}
 
             <button class="btn btn-success" type="submit">Generate Password</button>
           </form>
